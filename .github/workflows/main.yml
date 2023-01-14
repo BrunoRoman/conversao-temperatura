@@ -23,5 +23,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: AWS CodeCommit Sync Action
-        uses: inception-health/sync-up-to-codecommit-action@main
+      - name: aws-codecommit-sync
+        # You may pin to the exact commit or the version.
+        # uses: afinkorea/aws-codecommit-sync@bdc7acc2538be1e2f2c926f83c25a7b3e8f216b1
+        uses: afinkorea/aws-codecommit-sync@v1.0.0
+        with:
+          # CodeCommit repository name.
+          repository_name: conversao-temperatura
+          # Region of the CodeCommit repository.
+          aws_region: us-east-1
+          # branch
+          branch: main
