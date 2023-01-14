@@ -23,8 +23,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Sync up to AWS CodeCommit Action
-        uses: youyo/sync-up-to-codecommit-action@v1.0.5
-        with:
-          repository_name: conversao-temperatura
-          aws_region: us-east-1
+      - name: AWS CodeCommit Sync Action
+        uses: inception-health/sync-up-to-codecommit-action@main
